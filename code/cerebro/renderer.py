@@ -127,7 +127,10 @@ class Renderer_panda3d(Renderer):
         """
         A method to display all rendered objects.
         """
-        self.window.run()
+        try:
+            self.window.run()
+        except SystemExit:
+
 
     def draw(self):
         """
